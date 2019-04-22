@@ -1,0 +1,353 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);.control {
+  font-family: Roboto, 'sans-serif';
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 9px;
+  padding-top: 0px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control span{
+  cursor: pointer;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+.control-radio .control_indicator {
+  border-radius: 6px;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #ffffff;
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #ccc;
+}
+
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control_indicator:after {
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+/*.control-checkbox .control_indicator:after {*/
+  /*left: 8px;*/
+  /*top: 3px;*/
+  /*width: 3px;*/
+  /*height: 8px;*/
+  /*border: solid #66B5F8;*/
+  /*border-width: 0 2px 2px 0;*/
+  /*-webkit-transform: rotate(45deg);*/
+          /*transform: rotate(45deg);*/
+/*}*/
+.control-group.active .control-checkbox .control_indicator:after {
+  display: block;
+  left: 8px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  border: solid #66B5F8;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
+h1,
+.h1 {
+  font-size: 34px;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+* {
+  font-family: 'Roboto', 'sans-serif' !important;
+}
+
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+.preloader {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  z-index: 9999;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.default-color {
+  color: #66B5F8;
+}
+
+.default-color.danger {
+  color: #fdafbb;
+}
+
+.default-color.grey {
+  color: #d0c9d6;
+}
+
+.default-color.link {
+  color: #343a40;
+}
+
+.default-color.accent {
+  color: #6979F8;
+}
+
+.default-color.secondary {
+  color: #3F3356;
+  opacity: 0.5;
+}
+
+.bg-accent {
+  background-color: #6979F8;
+  color: #ffffff;
+}
+
+.bg-not-accept-circle {
+  position: absolute;
+  background-color: #6979F8;
+  color: #ffffff;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 8px;
+  padding-top: 3px;
+  left: 0;
+}
+
+.bg-accept-circle {
+  position: absolute;
+  background-color: #00C48C;
+  color: #ffffff;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 8px;
+  padding-top: 3px;
+  left: 0;
+}
+
+.form-check {
+  padding: 0 15px;
+}
+
+.form-check .form-check-label {
+  margin-left: 20px;
+}
+
+.select2-container--default .select2-selection--single {
+  border: none !important;
+  border-radius: 8px !important;
+  height: auto !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 16px !important;
+  right: 8px !important;
+}
+
+.select2-selection__rendered,
+.form-control {
+  -webkit-box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  padding: 10px 16px;
+  height: auto;
+  font-size: 16px;
+  border: 1px solid transparent;
+}
+
+.select2-selection__rendered::-webkit-input-placeholder,
+.form-control::-webkit-input-placeholder {
+  color: #d0c9d6;
+}
+
+.select2-selection__rendered::-ms-input-placeholder,
+.form-control::-ms-input-placeholder {
+  color: #d0c9d6;
+}
+
+.select2-selection__rendered::placeholder,
+.form-control::placeholder {
+  color: #d0c9d6;
+}
+
+.btn.btn-default {
+  background-color: #66B5F8;
+  color: #ffffff;
+  border: 2px solid #66B5F8;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 8px 40px;
+  border-radius: 6px;
+}
+
+.btn.btn-default:hover {
+  background-color: #ffffff;
+  color: #66B5F8;
+}
+
+.btn.btn-default.invert {
+  background-color: #ffffff;
+  color: #66B5F8;
+}
+
+.btn.btn-default.invert:hover {
+  background-color: #66B5F8;
+  color: #ffffff;
+}
+
+.btn.btn-default.danger {
+  background-color: #FDAFBB;
+  color: #ffffff;
+  border-color: #FDAFBB;
+}
+
+.btn.btn-default.danger:hover {
+  color: #fdafbb;
+  background-color: #ffffff;
+}
+
+.btn.btn-default.success {
+  background-color: #7ddfc3;
+  color: #ffffff;
+  border-color: #7DDFC3;
+}
+
+.btn.btn-default.success:hover {
+  background-color: #ffffff;
+  color: #7ddfc3;
+}
+
+.btn.btn-default.violet {
+  background-color: #a5affb;
+  color: #ffffff;
+  border-color: #a5affb;
+}
+
+.btn.btn-default.violet:hover {
+  background-color: #ffffff;
+  color: #a5affb;
+}
+
+.btn-default-link {
+  color: #66B5F8;
+  font-size: 16px;
+}
+
+.default-text-style {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3F3356;
+}
+
+.fz-13 {
+  font-size: 13px !important;
+}
+
+.fz-14 {
+  font-size: 14px !important;
+}
+
+.fz-15 {
+  font-size: 15px !important;
+}
+
+.fz-16 {
+  font-size: 16px !important;
+}
+
+.fz-17 {
+  font-size: 17px !important;
+}
+
+.fz-18 {
+  font-size: 18px !important;
+}
+
+.fz-19 {
+  font-size: 19px !important;
+}
+
+.fz-20 {
+  font-size: 20px !important;
+}
+
+.fz-21 {
+  font-size: 21px !important;
+}
+
+.fz-22 {
+  font-size: 22px !important;
+}
+
+.box {
+  background-color: #ffffff;
+  border: 1px solid #ECEBED;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
