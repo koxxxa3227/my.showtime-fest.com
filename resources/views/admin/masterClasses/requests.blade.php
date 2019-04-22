@@ -24,6 +24,7 @@
 					<th>#</th>
 					<th>Телефон</th>
 					<th>EMail</th>
+					<th>День</th>
 					<th>К кому идёт</th>
 					<th>Сумма</th>
 					<th>Скидка</th>
@@ -36,10 +37,11 @@
 						<td>{{ $item->id }}</td>
 						<td>{{ $users[$item->user_id]->tel }}</td>
 						<td>{{ $users[$item->user_id]->email }}</td>
+						<td>{{ $masterClasses[$item->master_class_id]->date->format('d.m.Y') }}</td>
 						<td>{{ $masterClasses[$item->master_class_id]->name }}</td>
 						<td>{{ $item->amount }}</td>
 						<td>{{ $item->discount }}%</td>
-						<td>{{ $masterClasses[$item->master_class_id]->date->format('d.m.Y') }}</td>
+						<td>{{ $item->created_at->format('d.m.Y') }}</td>
 					</tr>
 				@endforeach
 				</tbody>
